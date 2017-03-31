@@ -40,6 +40,7 @@ namespace System
         /// <returns></returns>
         public static T FetchAttribute<T>(this Enum value) where T : Attribute
         {
+            //TEST
             FieldInfo fi = value.GetType().GetField(value.ToString());
             var attributes = (T[])fi.GetCustomAttributes(typeof(T), false);
             if (attributes.Length <= 0)
