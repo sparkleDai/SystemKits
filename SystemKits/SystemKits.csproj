@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B340FB5D-F4EE-4DE0-BD58-D21E0CF57BC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SystemKits</RootNamespace>
+    <AssemblyName>SystemKits</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\CommandInfo.cs" />
+    <Compile Include="Database\SqlHelper.cs" />
+    <Compile Include="Database\SqlProvider.cs" />
+    <Compile Include="Helpers\Security\AsciiEncryptHelper.cs" />
+    <Compile Include="Helpers\Security\DesEncryptHelper.cs" />
+    <Compile Include="Database\DBConstant.cs" />
+    <Compile Include="Extensions\Data\Base64Extension.cs" />
+    <Compile Include="Extensions\Data\DataTableExtension.cs" />
+    <Compile Include="Extensions\Data\DictionaryExtension.cs" />
+    <Compile Include="Extensions\Data\JsonExtension.cs" />
+    <Compile Include="Extensions\Data\ListExtension.cs" />
+    <Compile Include="Extensions\Drawing\ColorExtension.cs" />
+    <Compile Include="Extensions\Linq\ExpressionExtension.cs" />
+    <Compile Include="Extensions\Linq\LinqExtension.cs" />
+    <Compile Include="Helpers\Drawing\ColorHelper.cs" />
+    <Compile Include="Helpers\IO\FileHelper.cs" />
+    <Compile Include="Helpers\Geometry\GeometryHelper.cs" />
+    <Compile Include="Helpers\Math\MathHelper.cs" />
+    <Compile Include="Helpers\Geometry\PolygonHelper.cs" />
+    <Compile Include="Helpers\Type\EnumHelper.cs" />
+    <Compile Include="Helpers\Data\GuidHelper.cs" />
+    <Compile Include="Helpers\Network\HttpHelper.cs" />
+    <Compile Include="Helpers\Data\ListHelper.cs" />
+    <Compile Include="Helpers\Data\ReflectionHelper.cs" />
+    <Compile Include="Helpers\Security\SecurityHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions\Type\EnumExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
