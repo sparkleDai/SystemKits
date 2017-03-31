@@ -32,7 +32,7 @@ namespace System
         }
         #endregion
 
-        #region FetchDescription
+        #region FetchAttribute
         /// <summary>
         /// 获取枚举值的<seealso cref="Attribute"/>
         /// </summary>
