@@ -78,5 +78,50 @@ namespace System
         }
 
         #endregion
+
+        #region Permutations
+        /// <summary>  
+        /// 排列循环方法  
+        /// </summary>  
+        /// <param name="N"></param>  
+        /// <param name="R"></param>  
+        /// <returns></returns>  
+        public static long Permutations(int N, int R)
+        {
+            if (R > N || R <= 0 || N <= 0) throw new ArgumentException("params invalid!");
+            long t = 1;
+            int i = N;
+
+            while (i != N - R)
+            {
+                try
+                {
+                    checked
+                    {
+                        t *= i;
+                    }
+                }
+                catch
+                {
+                    throw new OverflowException("overflow happens!");
+                }
+                --i;
+            }
+            return t;
+        }
+        #endregion
+
+        #region Combinations
+        /// <summary>  
+        /// 组合  
+        /// </summary>  
+        /// <param name="N"></param>  
+        /// <param name="R"></param>  
+        /// <returns></returns>  
+        public static long Combinations(int N, int R)
+        {
+            return Permutations(N, R) / Permutations(R, R);
+        }
+        #endregion
     }
 }

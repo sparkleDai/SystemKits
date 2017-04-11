@@ -48,6 +48,7 @@
     <Compile Include="Database\CommandInfo.cs" />
     <Compile Include="Database\SqlHelper.cs" />
     <Compile Include="Database\SqlProvider.cs" />
+    <Compile Include="Extensions\Math\ArithmeticExtension.cs" />
     <Compile Include="Helpers\Security\AsciiEncryptHelper.cs" />
     <Compile Include="Helpers\Security\DesEncryptHelper.cs" />
     <Compile Include="Database\DBConstant.cs" />
